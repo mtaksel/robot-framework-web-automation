@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.2 on win32)" generated="2024-10-11T04:58:06.811197" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Framework-Web-Automation" source="C:\Users\mehme\IdeaProjects\robot-framework-web-automation">
+<suite id="s1-s1" name="TestSuite" source="C:\Users\mehme\IdeaProjects\robot-framework-web-automation\TestSuite">
+<suite id="s1-s1-s1" name="SearchTest" source="C:\Users\mehme\IdeaProjects\robot-framework-web-automation\TestSuite\SearchTest.robot">
+<test id="s1-s1-s1-t1" name="Search Test" line="12">
+<kw name="Launch Application" owner="SearchKeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-11T04:58:07.020541" level="INFO">Opening browser 'Chrome' to base url 'https://www.amazon.com.tr/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-11T04:58:07.019544" elapsed="4.911319"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-10-11T04:58:11.930863" elapsed="0.093616"/>
+</kw>
+<status status="PASS" start="2024-10-11T04:58:07.019544" elapsed="5.005933"/>
+</kw>
+<kw name="Search Product" owner="SearchKeywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T04:58:12.026475" level="INFO">Typing text 'macbook pro m2' into text field '//input[@id='twotabsearchtextbox']'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>${SearchKeyword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T04:58:12.025477" elapsed="0.184854"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-10-11T04:58:12.210331" level="INFO">Clicking button '//input[@id='nav-search-submit-button']'.</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T04:58:12.210331" elapsed="1.287786"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-10-11T04:58:13.535491" level="INFO">${actual} = "macbook pro m2"</msg>
+<var>${actual}</var>
+<arg>${SEARCH_RESULTS}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-11T04:58:13.498117" elapsed="0.037374"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-10-11T04:58:13.536488" level="INFO">${actual} = macbook pro m2</msg>
+<var>${actual}</var>
+<arg>${actual}.strip()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-10-11T04:58:13.536488" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${SearchKeyword}</arg>
+<arg>${actual}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-10-11T04:58:13.536488" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-11T04:58:12.025477" elapsed="1.511011"/>
+</kw>
+<kw name="Clear SUT To Initial State" owner="SearchKeywords">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-11T04:58:13.537486" elapsed="2.115769"/>
+</kw>
+<status status="PASS" start="2024-10-11T04:58:13.536488" elapsed="2.116767"/>
+</kw>
+<kw name="Clear SUT To Initial State" owner="SearchKeywords" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-11T04:58:15.654253" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-10-11T04:58:15.653255" elapsed="0.000998"/>
+</kw>
+<status status="PASS" start="2024-10-11T04:58:07.018547" elapsed="8.635706"/>
+</test>
+<status status="PASS" start="2024-10-11T04:58:06.831870" elapsed="8.823383"/>
+</suite>
+<status status="PASS" start="2024-10-11T04:58:06.830364" elapsed="8.824889"/>
+</suite>
+<status status="PASS" start="2024-10-11T04:58:06.812697" elapsed="8.843553"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot-Framework-Web-Automation">Robot-Framework-Web-Automation</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestSuite">Robot-Framework-Web-Automation.TestSuite</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="SearchTest">Robot-Framework-Web-Automation.TestSuite.SearchTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
