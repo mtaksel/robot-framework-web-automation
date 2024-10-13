@@ -18,8 +18,10 @@ Search Product
     ${actual}    Get Text    ${SEARCH_RESULTS}
     # Remove the search result "" characters
     ${actual}    Evaluate    ${actual}.strip()
-    # verify that the search results are correct
+    # Log the actual text
+    Log    Actual Text: ${actual}
+    # Verify that the search results are correct
     Should Be Equal    ${SearchKeyword}    ${actual}
 
-Clear SUT To Initial State
+Close Browser Window
     Close Browser

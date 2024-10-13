@@ -9,8 +9,8 @@ Suite Teardown
 Test Teardown    Clear SUT To Initial State
 
 *** Test Cases ***
-Search Test
+Search for a Product Test
     Launch Application
     Search Product
-    Clear SUT To Initial State
+    Close Browser Window
 
