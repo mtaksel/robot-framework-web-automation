@@ -14,6 +14,8 @@ Search Product
     Input Text    ${SEARCH_BOX}    ${SearchKeyword}
     # Click Search Button To Perform Search
     Click Button    ${SEARCH_BUTTON}
+
+Verify Product
     # Get the text of the search result
     ${actual}    Get Text    ${SEARCH_RESULTS}
     # Remove the search result "" characters
